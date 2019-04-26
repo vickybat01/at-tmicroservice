@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.att.microservices</groupId>
-	<artifactId>AttCompositeService</artifactId>
+	<artifactId>AttAtomicService1</artifactId>
 	<version>0.0.1</version>
-	<name>AttCompositeService</name>
-	<description>Composite Service</description>
+	<name>AttAtomicService1</name>
+	<description>Atomic Service 1</description>
 
 	<properties>
 		<java.version>1.8</java.version>

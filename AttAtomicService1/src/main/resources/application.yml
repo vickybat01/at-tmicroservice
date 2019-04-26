@@ -1,0 +1,23 @@
+spring:
+  jackson:
+    time-zone: America/Toronto
+server:
+  port: 0  
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    initialInstanceInfoReplicationIntervalSeconds: 40
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 30
+    leaseExpirationDurationInSeconds: 90
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG

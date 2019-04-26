@@ -1,0 +1,11 @@
+spring:
+  application:
+    version: v1
+    name: attAtomicService1_${spring.application.version}  
+  cloud:
+    config:
+      enabled: false
+      fail-fast: false      
+      uri: http://localhost:8888
+      username: satyajit
+      password: atttest!

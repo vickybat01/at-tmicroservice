@@ -51,7 +51,7 @@ public class AttCompositeServiceImpl implements AttCompositeService {
 		ResponseEntity<String> response = null;
 		try {
 			//calling atomic service one
-			request = new RequestEntity(HttpMethod.GET,new URI(locateServiceUrl(attAtomicService1,"getMessages")));
+			request = new RequestEntity(HttpMethod.GET,new URI(locateServiceUrl(attAtomicService1,"getMessages1")));
 			response = restTemplate.exchange(request, String.class);
 			output= mapper.readValue(response.getBody(), GenericAttOutput.class);
 		}catch(HttpStatusCodeException hsce) {

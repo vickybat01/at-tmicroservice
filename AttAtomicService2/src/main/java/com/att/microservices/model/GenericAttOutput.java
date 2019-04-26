@@ -3,7 +3,7 @@ package com.att.microservices.model;
 import java.util.List;
 
 public class GenericAttOutput {
-	
+
 	private List<String> messages;
 
 	@Override
@@ -20,4 +20,3 @@ public class GenericAttOutput {
 	}
 
 }
-
