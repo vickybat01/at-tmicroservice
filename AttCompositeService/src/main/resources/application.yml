@@ -1,0 +1,49 @@
+server:
+  port: 0
+  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    initial-instance-info-replication-interval-seconds: 40
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost 
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+    org.springframework.web.cors: DEBUG
+hazelcast:
+  groupname:  local
+  grouppasswd: local
+  tcpipenabled: false
+  groupmembers: 127.0.0.1
+  ttl: 900
+  maxdepth: 1000
+  eviction-policy: LRU
+  
+spring:
+  jackson:
+    time-zone: America/Toronto
+    deserialization:
+      fail-on-unknown-properties: false
+    generator:
+       WRITE_BIGDECIMAL_AS_PLAIN: true
+       WRITE_NUMBERS_AS_STRINGS: false
+
+service:
+    atomic: 
+       attAtomicService1:
+          name: attAtomicService1
+          version: v1
+          versionname: ${service.atomic.attAtomicService1.name}_${service.atomic.attAtomicService1.version}
+       attAtomicService2:
+          name: attAtomicService2
+          version: v1
+          versionname: ${service.atomic.attAtomicService2.name}_${service.atomic.attAtomicService2.version}
