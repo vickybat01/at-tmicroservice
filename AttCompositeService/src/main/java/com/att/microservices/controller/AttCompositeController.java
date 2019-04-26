@@ -24,7 +24,7 @@ public class AttCompositeController {
 	
 	@RequestMapping(value = "/att/retrieveMessages", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<List<GenericAttOutput>> retrieveAttMessage(
+	public ResponseEntity<GenericAttOutput> retrieveAttMessage(
 			@RequestHeader(value = "test") String test)
 			throws Exception {
 		return new ResponseEntity<>(attCompositeService.retrieveMessages(),
