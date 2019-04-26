@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableAutoConfiguration
 @ComponentScan
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages ={"com.att.microservices"})
 public class AttAtomicService1Application {
 
 	public static void main(String[] args) {

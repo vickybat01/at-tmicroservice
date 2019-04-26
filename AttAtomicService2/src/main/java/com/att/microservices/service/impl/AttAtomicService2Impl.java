@@ -3,10 +3,13 @@ package com.att.microservices.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.att.microservices.exception.AttAtomicService2Exception;
 import com.att.microservices.model.GenericAttOutput;
 import com.att.microservices.service.AttAtomicService2;
 
+@Service
 public class AttAtomicService2Impl implements AttAtomicService2 {
 
 	@Override
