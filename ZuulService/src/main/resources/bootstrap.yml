@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: zuulservice
+  cloud:
+    config:
+      enabled: false
+      fail-fast: false      
+
+      uri: http://localhost:8888
+      username: satyajit
+      password: atttest!
