@@ -4,6 +4,6 @@ import com.att.microservices.model.GenericAttOutput;
 
 public interface AttCompositeService {
 	
-	public GenericAttOutput retrieveMessages();
+	public GenericAttOutput retrieveInformation();
 
 }

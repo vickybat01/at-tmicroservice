@@ -17,7 +17,7 @@ public class GatewayServicePreFilter extends ZuulFilter {
         
         if(	requestURI != null && requestURI.contains("/att/")) {
         	ctx.addZuulRequestHeader("testHeader", "testHeader");
-        	return null;
+        	//return null;
         }else{
         	sendInvalidUrlResponse(ctx);
         }

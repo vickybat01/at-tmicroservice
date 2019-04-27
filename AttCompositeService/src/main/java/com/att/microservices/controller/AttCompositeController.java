@@ -1,7 +1,5 @@
 package com.att.microservices.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,12 +20,12 @@ public class AttCompositeController {
 	AttCompositeService attCompositeService;
 	
 	
-	@RequestMapping(value = "/att/retrieveMessages", method = RequestMethod.GET)
+	@RequestMapping(value = "/retrieveInformation", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
 	public ResponseEntity<GenericAttOutput> retrieveAttMessage(
-			@RequestHeader(value = "test") String test)
+			@RequestHeader(value = "testHeader") String test)
 			throws Exception {
-		return new ResponseEntity<>(attCompositeService.retrieveMessages(),
+		return new ResponseEntity<>(attCompositeService.retrieveInformation(),
 				HttpStatus.OK);
 	}
 

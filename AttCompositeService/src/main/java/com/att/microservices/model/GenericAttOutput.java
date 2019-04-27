@@ -1,23 +1,30 @@
 package com.att.microservices.model;
 
-import java.util.List;
+import java.io.Serializable;
 
-public class GenericAttOutput {
+public class GenericAttOutput implements Serializable {
 	
-	private List<String> messages;
-
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private AtomicService1Output op1;
+	private AtomicService2Output op2;
+	public AtomicService1Output getOp1() {
+		return op1;
+	}
+	public void setOp1(AtomicService1Output op1) {
+		this.op1 = op1;
+	}
+	public AtomicService2Output getOp2() {
+		return op2;
+	}
+	public void setOp2(AtomicService2Output op2) {
+		this.op2 = op2;
+	}
 	@Override
 	public String toString() {
-		return "GenericAttOutput [messages=" + messages + "]";
+		return "GenericAttOutput [op1=" + op1 + ", op2=" + op2 + "]";
 	}
-
-	public List<String> getMessages() {
-		return messages;
-	}
-
-	public void setMessages(List<String> messages) {
-		this.messages = messages;
-	}
-
 }
 

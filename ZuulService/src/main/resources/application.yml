@@ -33,8 +33,8 @@ zuul:
     enabled: false
   ignoredServices: "*"
   routes:
-    attCompositeService__v1:
-      path: /*v1/att/**
+    attCompositeService_v1:
+      path: /att/*v1/**
       
 hystrix:
   command:
